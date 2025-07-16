@@ -1,6 +1,6 @@
 package weapon;
 
-public class Weapon {
+public abstract class Weapon {
     private String name;
     private int damage;
     private int cost = 0;
@@ -10,4 +10,23 @@ public class Weapon {
         this.damage = damage;
     }
     public abstract String attackMessage();
+
+    public void setName(String name) {
+        this.name = name;
+    }
+    public String getName(){
+        return this.name;
+    }
+    public void setDamage(int damage) {
+        this.damage = damage;
+    }
+    public int getDamage(){
+        return this.damage;
+    }
+    public void setCost(int cost) {
+        this.cost = cost;
+    }
+    public int getCost(){
+        return this.cost;
+    }
 }

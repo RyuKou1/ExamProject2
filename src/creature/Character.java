@@ -1,8 +1,11 @@
 package creature;
 
+import weapon.Weapon;
+
 public abstract class Character implements Creature {
     private String name;
     private int hp;
+    private Weapon weapon;
 
     public Character(String name, int hp) {
         if(hp < 0){
@@ -33,5 +36,8 @@ public abstract class Character implements Creature {
     }
     public String getName(){
         return this.name;
+    }
+    void die(){
+        System.out.println(getName() + "は死んでしまった！");
     }
 }
